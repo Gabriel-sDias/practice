@@ -1,0 +1,26 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "Repo para treinamento",
+  "homepage": "https://github.com/Gabriel-sDias/practice#readme",
+  "bugs": {
+    "url": "https://github.com/Gabriel-sDias/practice/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel-sDias/practice.git"
+  },
+  "license": "MIT",
+  "author": "",
+  
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev"
+  },
+  "dependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
