@@ -13,15 +13,19 @@
   "license": "MIT",
   "author": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
+    "docker:up": "docker compose -f src/infra/compose.yaml up -d",
+    "docker:down": "docker compose -f src/infra/compose.yaml down ",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "node --no-warnings --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll --verbose"
   },
   "dependencies": {
     "next": "^13.1.6",
+    "pg": "^8.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
