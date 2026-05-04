@@ -15,9 +15,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "docker:up": "docker compose -f src/infra/compose.yaml up -d",
-    "docker:down": "docker compose -f src/infra/compose.yaml down ",
+    "dev": "npm run service:up && next dev",
+    "service:up": "docker compose -f src/infra/compose.yaml up -d",
+    "service:stop": "docker compose -f src/infra/compose.yaml stop -d",
+    "service:down": "docker compose -f src/infra/compose.yaml down",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",

@@ -11,7 +11,6 @@ async function query(queryObject) {
   try {
     await client.connect();
     const res = await client.query(queryObject);
-    await client.end();
     return {
       res: res,
       status: 200,
@@ -22,6 +21,8 @@ async function query(queryObject) {
       connected: false,
       status: 503,
     };
+  } finally {
+    await client.end();
   }
 }
 
